@@ -286,7 +286,7 @@
                     <div class="flex items-center">
                         <div class="ml-4 text-lg leading-7 font-semibold">
                             <i class="fas fa-plus"></i>
-                            <a href="" class="underline text-gray-900 dark:text-white">Add service</a>
+                            <a href="/services/create" class="underline text-gray-900 dark:text-white">Add service</a>
                         </div>
                     </div>
                 </div>

@@ -25,9 +25,21 @@
 <body class="text-white">
 <div class="container">
     <div class="row">
-        <h2 class="mb-4">Detail of the service {{ $service->id }}</h2>
+        <div class="d-flex justify-content-between pl-0">
+            <div>
+                <h2 class="mb-4">Detail of the service</h2>
+            </div>
+            <div>
+                <a href="/services" type="button" class="btn text-white ml-auto"><i class="fas fa-arrow-left"></i> List of services</a>
+            </div>
+        </div>
 
-
+        <div class="row mb-1">
+            <label class="col-sm-2">ID</label>
+            <div class="col-sm-10">
+                {{ $service->id }}
+            </div>
+        </div>
         <div class="row mb-1">
             <label class="col-sm-2">Name</label>
             <div class="col-sm-10">
@@ -55,7 +67,19 @@
         <div class=" row mb-1">
             <label class="col-sm-2">End of service</label>
             <div class="col-sm-10">
-                {{ $service->end ? \Carbon\Carbon::parse($service->end)->format('d.m. Y') : 'Indefinite' }}
+                {{ $service->end ? \Carbon\Carbon::parse($service->end)->format('d.m.Y') : 'Indefinite' }}
+            </div>
+        </div>
+        <div class=" row mb-1">
+            <label class="col-sm-2">Created at</label>
+            <div class="col-sm-10">
+                {{ \Carbon\Carbon::parse($service->created_at)->format('d.m.Y h:m:s') }}
+            </div>
+        </div>
+        <div class=" row mb-1">
+            <label class="col-sm-2">Updated at</label>
+            <div class="col-sm-10">
+                {{ \Carbon\Carbon::parse($service->updated_at)->format('d.m.Y h:m:s') }}
             </div>
         </div>
     </div>

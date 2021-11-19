@@ -25,10 +25,15 @@
 <body class="text-white">
 <div class="container">
     <div class="row">
-        <h2 class="mb-4">Edit the service</h2>
-
-        <form method="POST" action="/services/{{ $service->id }}">
-            @method('PUT')
+        <div class="d-flex justify-content-between pl-0">
+            <div>
+                <h2 class="mb-4">Create service</h2>
+            </div>
+            <div>
+                <a href="/services" type="button" class="btn text-white ml-auto"><i class="fas fa-arrow-left"></i> List of services</a>
+            </div>
+        </div>
+        <form method="POST" action="/services">
             @csrf
 
             @if ($errors->any())
@@ -44,23 +49,17 @@
             @endif
 
             <div class="form-group row mb-1">
-                <label class="col-sm-3 col-form-label" for="formGroupIDInput">ID</label>
-                <div class="col-sm-9">
-                    <input type="text" name="id" class="form-control" id="formGroupIDInput" value="{{ $service->id }}" readonly>
-                </div>
-            </div>
-            <div class="form-group row mb-1">
                 <label class="col-sm-3 col-form-label" for="formGroupNameInput">Name</label>
                 <div class="col-sm-9">
                     <input type="text" name="name" class="form-control" id="formGroupNameInput" placeholder="Name"
-                           value="{{ old('name') ?: $service->name }}">
+                           value="{{ old('name') }}">
                 </div>
             </div>
             <div class="form-group row mb-1">
                 <label class="col-sm-3 col-form-label" for="formGroupUnitPriceInput">Unit price</label>
                 <div class="col-sm-9">
                     <input type="number" name="unit_price" class="form-control" id="formGroupUnitPriceInput" placeholder="Unit price"
-                           value="{{ old('unit_price') ?: $service->unit_price}}">
+                           value="{{ old('unit_price') }}">
                 </div>
             </div>
             <div class="form-group row mb-1">
@@ -68,23 +67,25 @@
                 <div class="col-sm-9">
                     <select class="form-control" id="formGroupBillingInput" name="billing">
                         <option value="">-</option>
-                        <option value="monthly" {{ (old('billing') ?: $service->billing) == 'monthly' ? 'selected' : '' }}>Monthly</option>
-                        <option value="quarterly" {{ (old('billing') ?: $service->billing) == 'quarterly' ? 'selected' : '' }}>Quarterly</option>
-                        <option value="semi-annually" {{ (old('billing') ?: $service->billing) == 'semi-annually' ? 'selected' : '' }}>Semi Annually</option>
-                        <option value="annually" {{ (old('billing') ?: $service->billing) == 'annually' ? 'selected' : '' }}>Annually</option>
+                        <option value="monthly" {{ old('billing') == 'monthly' ? 'selected' : '' }}>Monthly</option>
+                        <option value="quarterly" {{ old('billing') == 'quarterly' ? 'selected' : '' }}>Quarterly</option>
+                        <option value="semi-annually" {{ old('billing') == 'semi-annually' ? 'selected' : '' }}>Semi Annually</option>
+                        <option value="annually" {{ old('billing') == 'annually' ? 'selected' : '' }}>Annually</option>
                     </select>
                 </div>
             </div>
             <div class="form-group row mb-1">
                 <label class="col-sm-3 col-form-label" for="formGroupStartInput">Start of service</label>
                 <div class="col-sm-9">
-                    <input type="date" name="start" class="form-control" id="formGroupStartInput" value="{{ old('start') ?: $service->start }}">
+                    <input type="date" name="start" class="form-control" id="formGroupStartInput"
+                           value="{{ old('start') }}">
                 </div>
             </div>
             <div class="form-group row mb-1">
                 <label class="col-sm-3 col-form-label" for="formGroupEndInput">End of service</label>
                 <div class="col-sm-9">
-                    <input type="date" name="end" class="form-control" id="formGroupEndInput" value="{{ old('end') ?: $service->end }}">
+                    <input type="date" name="end" class="form-control" id="formGroupEndInput"
+                           value="{{ old('end') }}">
                 </div>
             </div>
 

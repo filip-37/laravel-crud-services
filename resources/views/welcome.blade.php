@@ -84,10 +84,6 @@
             display: grid
         }
 
-        .hidden {
-            display: none
-        }
-
         .items-center {
             align-items: center
         }
@@ -100,20 +96,8 @@
             font-weight: 600
         }
 
-        .h-5 {
-            height: 1.25rem
-        }
-
-        .h-8 {
-            height: 2rem
-        }
-
         .h-16 {
             height: 4rem
-        }
-
-        .text-sm {
-            font-size: .875rem
         }
 
         .text-lg {
@@ -129,40 +113,12 @@
             margin-right: auto
         }
 
-        .ml-1 {
-            margin-left: .25rem
-        }
-
-        .mt-2 {
-            margin-top: .5rem
-        }
-
-        .mr-2 {
-            margin-right: .5rem
-        }
-
-        .ml-2 {
-            margin-left: .5rem
-        }
-
-        .mt-4 {
-            margin-top: 1rem
-        }
-
         .ml-4 {
             margin-left: 1rem
         }
 
         .mt-8 {
             margin-top: 2rem
-        }
-
-        .ml-12 {
-            margin-left: 3rem
-        }
-
-        .-mt-px {
-            margin-top: -1px
         }
 
         .max-w-6xl {
@@ -186,67 +142,16 @@
             padding-bottom: 1rem
         }
 
-        .px-6 {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem
-        }
-
         .pt-8 {
             padding-top: 2rem
-        }
-
-        .fixed {
-            position: fixed
         }
 
         .relative {
             position: relative
         }
 
-        .top-0 {
-            top: 0
-        }
-
-        .right-0 {
-            right: 0
-        }
-
         .shadow {
             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06)
-        }
-
-        .text-center {
-            text-align: center
-        }
-
-        .text-gray-200 {
-            --text-opacity: 1;
-            color: #edf2f7;
-            color: rgba(237, 242, 247, var(--text-opacity))
-        }
-
-        .text-gray-300 {
-            --text-opacity: 1;
-            color: #e2e8f0;
-            color: rgba(226, 232, 240, var(--text-opacity))
-        }
-
-        .text-gray-400 {
-            --text-opacity: 1;
-            color: #cbd5e0;
-            color: rgba(203, 213, 224, var(--text-opacity))
-        }
-
-        .text-gray-500 {
-            --text-opacity: 1;
-            color: #a0aec0;
-            color: rgba(160, 174, 192, var(--text-opacity))
-        }
-
-        .text-gray-600 {
-            --text-opacity: 1;
-            color: #718096;
-            color: rgba(113, 128, 150, var(--text-opacity))
         }
 
         .text-gray-700 {
@@ -270,14 +175,6 @@
             -moz-osx-font-smoothing: grayscale
         }
 
-        .w-5 {
-            width: 1.25rem
-        }
-
-        .w-8 {
-            width: 2rem
-        }
-
         .w-auto {
             width: auto
         }
@@ -291,10 +188,6 @@
                 border-radius: .5rem
             }
 
-            .sm\:block {
-                display: block
-            }
-
             .sm\:items-center {
                 align-items: center
             }
@@ -303,16 +196,8 @@
                 justify-content: flex-start
             }
 
-            .sm\:justify-between {
-                justify-content: space-between
-            }
-
             .sm\:h-20 {
                 height: 5rem
-            }
-
-            .sm\:ml-0 {
-                margin-left: 0
             }
 
             .sm\:px-6 {
@@ -324,13 +209,6 @@
                 padding-top: 0
             }
 
-            .sm\:text-left {
-                text-align: left
-            }
-
-            .sm\:text-right {
-                text-align: right
-            }
         }
 
         @media (min-width: 768px) {
@@ -378,18 +256,6 @@
                 color: #fff;
                 color: rgba(255, 255, 255, var(--text-opacity))
             }
-
-            .dark\:text-gray-400 {
-                --text-opacity: 1;
-                color: #cbd5e0;
-                color: rgba(203, 213, 224, var(--text-opacity))
-            }
-
-            .dark\:text-gray-500 {
-                --tw-text-opacity: 1;
-                color: #6b7280;
-                color: rgba(107, 114, 128, var(--tw-text-opacity))
-            }
         }
     </style>
 
@@ -427,7 +293,7 @@
                 <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
                     <div class="flex items-center">
                         <div class="ml-4 text-lg leading-7 font-semibold">
-                            <a href="" class="underline text-gray-900 dark:text-white">List services</a>
+                            <a href="/services" class="underline text-gray-900 dark:text-white">List services</a>
                         </div>
                     </div>
                 </div>
